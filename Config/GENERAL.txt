@@ -25,7 +25,7 @@ CONFIG_PACKAGE_kmod-usb-net-cdc-subset=y
 #科学插件调整
 CONFIG_PACKAGE_luci-app-homeproxy=y
 #增加插件
-CONFIG_PACKAGE_kmod-fuse=y
+# CONFIG_PACKAGE_kmod-fuse=y
 # CONFIG_PACKAGE_kmod-fs-btrfs=y test
 #删除插件
 CONFIG_PACKAGE_luci-app-wol=n
@@ -85,9 +85,8 @@ CONFIG_PACKAGE_luci-lib-ipkg=y
 CONFIG_PACKAGE_luci-lua-runtime=y
 CONFIG_PACKAGE_luci-proto-relay=y
 CONFIG_PACKAGE_mmc-utils=y
+### CONFIG_PACKAGE_mount-utils=y
 CONFIG_PACKAGE_nand-utils=y
-CONFIG_PACKAGE_openssh-keygen=y
-CONFIG_PACKAGE_openssl-util=y
 CONFIG_PACKAGE_proto-bonding=y
 CONFIG_PACKAGE_sfdisk=y
 CONFIG_PACKAGE_sgdisk=y
