@@ -1,7 +1,11 @@
 #!/bin/bash
 
-#替换为官方feed
-sed -i 's/github.com\/immortalwrt/git.openwrt.org\/feed/g' ./feeds.conf.default
+#LiBWrt 净化
+if [[ "${WRT_SOURCE^^}" == *"LIBWRT"* ]]; then
+	#替换为官方feed
+	sed -i 's/github.com\/immortalwrt/git.openwrt.org\/feed/g' ./feeds.conf.default
+fi
+
 #添加编译日期标识
 sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ $WRT_MARK-$WRT_DATE')/g" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
 
@@ -59,3 +63,4 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 		echo "qualcommax set up nowifi successfully!"
 	fi
 fi
+
